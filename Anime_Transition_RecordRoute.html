@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title>Anime</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+.box{
+	position:absolute;
+	left: 100px;
+	top: 100px;
+	background-color: black;
+	width:100px;
+	height:100px;
+	transition:left 1s, top 1s;
+	/*
+	height: 0px;
+	transition:height 1s, background-color 1s;
+	*/
+
+
+}
+
+
+	</style>	
+
+
+	<script type="text/javascript">
+
+
+var box;
+var moving;
+var steps;
+window.onload=function(){
+	box=document.getElementById("box");
+	box.addEventListener("transitionend", end);
+	moving=false;
+	steps=new Array();
+
+	document.addEventListener("click", clickDoc);
+
+	//box.style.height="200px";
+	//box.style.backgroundColor="red";
+
+};	
+	function end(e){
+		if(e.propertyName=="top"){		
+
+		//console.log(e);
+			if(steps.length>0){
+				var step=steps.shift();//把第一個物件從陣列中取出
+				box.style.left=step.x+"px";
+				box.style.top=step.y+"px";
+
+			}else{
+
+			moving=false;
+			}
+		}	
+	};
+	
+	
+	function clickDoc(e){
+		//console.log(moving);
+
+		if(moving){//移動中，記錄座標
+			steps.push({x:e.clientX, y:e.clientY});
+
+		}else{//停住
+		box.style.left=e.clientX+"px";
+		box.style.top=e.clientY+"px";
+		if(e.clientX!=box.offsetLeft||e.clientY!=box.offsetTop){
+		moving=true;}
+		}
+	};
+	//clickDoc({clientX:30, shiftKey:true});
+
+
+/*		
+var box;
+
+window.onload=function(){
+	box=document.getElementById("box");
+	var height=0;
+	var animeId=window.setInterval(function(){
+		height++;
+		box.style.height=height+"px";
+		if(height>200){
+			window.clearInterval(animeId)
+		}
+	}, 2);
+
+};
+
+*/
+ 
+
+
+	</script>
+	</head>
+
+	<body>
+		<div>點擊螢幕，方塊會移動並記錄滑鼠點擊位置，執行路徑(建議以chorme開啓網頁)</div>
+		<div>Click mouse within the space of the frame to move the cube.</div>
+		<div class="box" id="box"></div>
+	
+	</body>
+</html>
+	
