@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canvas</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript">
+		var ctx;
+		window.onload=function(){//註冊load事件在windows上，靜態內容載入後直接執行
+			var cvs=document.getElementById("cvs");
+			ctx=cvs.getContext('2d');
+			ctx.canvas.addEventListener("click", clickCvs);//clickCvs＝觸發點擊canvas事件
+			//drawStar(250, 250);
+		//線性移動
+			/*ctx.translate(100, 100);
+			//畫布整體坐標原點往右往下移動100，而非畫布上的矩形移動，包括以下所有坐標都採用新坐標
+		//縮放
+			ctx.scale(2, 1);//x軸放大兩倍,y軸一倍
+			ctx.fillRect(200, 200, 100, 100);//新的坐標系統（相對於新的原點*/
+		//旋轉(根據坐標原點往下旋轉45度)
+			
+
+
+		};
+
+		function clickCvs(e){
+			var x=e.clientX-ctx.canvas.offsetLeft; 
+			// 將滑鼠的x,y坐標定義為drawStar的坐標中心點(相對于畫布本身、而非網頁本身)
+			var y=e.clientY-ctx.canvas.offsetTop;
+			var size=Math.random()*100+50;//50 ~ 100
+			drawStar(x, y, size);//點擊完，呼叫函式
+		};
+
+
+		
+		function drawStar(x, y, size){//點擊處為矩形中心＝坐標原點
+			ctx.translate(x, y);//移動坐標軸位置
+			ctx.fillRect(-size/2, -size/2, size, size);//相對於新坐標軸的矩形位置
+			ctx.rotate(Math.PI/4);
+			ctx.fillRect(-size/2, -size/2, size, size);//相對於新坐標軸的矩形位置
+		//恢復原坐標值設定（將原點移回原位置）
+			ctx.rotate(-Math.PI/4);
+			ctx.translate(-x, -y);
+		//以下開始回到預設坐標值
+
+		};
+		
+		</script>
+	</head>
+	<body>
+	<!--（畫出畫布範圍）canvas標籤的寬高只能用html寫,其他屬性可用css寫-->
+	<div style="font-size:20px">在方框內任意點擊，隨機產生不同大小的星狀圖形：</div>
+	<div style="font-size:20px">Click space within the frame to create stars of random sizes：</div>
+	<br>
+	<canvas id="cvs" width="800" height="600" style="border:5px solid black;"></canvas>
+	
+	</body>
+</html>
