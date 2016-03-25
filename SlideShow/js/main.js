@@ -7,7 +7,7 @@ $(function(){
 		
 		$slides.eq(currentIndex).fadeIn();
 		
-		setInterval(showNextSlide, 2000);
+		setInterval(showNextSlide, 3000);
 
 		function showNextSlide(){
 			//var nextIndex = (currentIndex+1>=slideCount)?0:currentIndex++;
