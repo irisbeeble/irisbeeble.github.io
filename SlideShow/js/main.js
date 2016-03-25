@@ -17,34 +17,29 @@ $(function(){
 			currentIndex = nextIndex;
 			
 		};
-	
-		
-		$('.no-gutter div').on({
-			
-			mouseover: function(){
-			
+		 
 
-			//$(this).find('img').fadeOut();
-			$(this).find('>span').stop(true).animate({
-                width: '100%',         
-            })
+		 var $aside = $('.page-main > aside');
+	     var $asideButton = $aside.find('button');
+	    
+		 $asideButton.on('click', function() {
+	     $aside.toggleClass('open');
+	      if ($aside.hasClass('open')) {
 
-            
+            $aside.stop(true).animate({
+                left: "-10px"
+            }, duration, 'easeInOutQuint');
+            $asideButton.find('img').attr("src", "img/btn_close.png");
+        } else {
+            $aside.stop(true).animate({
+                left: "-350px"
+            }, duration, 'easeInOutQuint');
+            $asideButton.find('img').attr("src", "img/btn_open.png");
+        }
 
-            },
-            
-            mouseout: function(){
-            
-				$(this).find('>span').stop(true).animate({
-                width: '0%',         
-            })
-
-            }
-
+    });
 
    		 
 		});
 
-		
-
-});
+	

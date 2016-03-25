@@ -1,0 +1,14 @@
+.slideshow{
+	left:-9%;
+	margin-right: 0;
+	margin-left: 0;
+	position:relative;
+	width: 113.7%;
+	height:260px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#navbar-example .container-fluid{
+	width:85%;
+}

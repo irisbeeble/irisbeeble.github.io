@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>Slide Show</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 768px)" href="./css/medium.css" / >
+	<link rel="stylesheet" media="screen and (max-width: 480px)" href="./css/sx.css" / >
 	
 	
 
@@ -47,113 +50,120 @@
 		</nav>
 
 
-	<container id='container'>
+	
 		<header id='header'>
-			
-				<div class="slideshow">
-					<img src="https://unsplash.it/1698/900/?random=1" alt="">
-					<img src="https://unsplash.it/1698/900/?random=2" alt="">
-					<img src="https://unsplash.it/1698/900/?random=3" alt="">
-					<img src="https://unsplash.it/1698/900/?random=4" alt="">
-					<div class='slideshow-nav'>
-						<a href="#" class='prev'>Prev</a>
-						<a href="#" class='next'>Next</a>
-					</div>
-					<!--<div class='slideshow-indicator'>
-						<a href='#' class='first'>indi</a>
-						<a href='#' class='second'>indi</a>
-						<a href='#' class='third'>indi</a>
-						<a href='#' class='forth'>indi</a>-->
-					</div>
-			</div></header><section id="middle-1">
-			<div class='middle-1'>
-				<h2>We've got what you need!</h2>
-				<hr>
-				<p>We have everything you need to get your new website up and running in no time! <br>All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-				<a href='#' style="text-decoration:none"><div class='enter'>ENTER</div></a>
+			<div class="container-fluid container">
+				<div class="row row-for-slides">				
+						<div class="slideshow col-sx-12 col-md-12">
+							<img src="https://placem.at/things?w=981&h=600&txt=Brand+New+World&random=1" alt="">
+							<img src="https://placem.at/things?w=981&h=600&txt=New+Experience&random=2" alt="">
+							<img src="https://placem.at/things?w=981&h=600&txt=Have+Fun+Here&random=3" alt="">
+							<img src="https://placem.at/things?w=981&h=600&txt=Try+Yourself&random=4" alt="">
+							<div class='slideshow-nav'>
+								<a href="#" class='prev'>Prev</a>
+								<a href="#" class='next'>Next</a>
+							</div>
+						<!--<div class='slideshow-indicator'>
+							<a href='#' class='first'>indi</a>
+							<a href='#' class='second'>indi</a>
+							<a href='#' class='third'>indi</a>
+							<a href='#' class='forth'>indi</a>-->
+						</div>		
+				</div>
 			</div>
-			
-				
-				
-			
+		</header>
+
+			<section id="middle-1">
+					<div class="row row-for-middle-1">
+						<div class='col-sx-12 col-md-12'>
+							<h2>We've got what you need!</h2>
+							<hr>
+							<p>We have everything you need to get your new website up and running in no time! <br>All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+							<a href='#' style="text-decoration:none">
+								<div class='enter'>ENTER
+								</div>
+							</a>
+						</div>
+					</div>
 		</section>
-		
 		<section id='middle-2'>
 			<div class='container-fluid'>
-				  <div class="row no-gutter">
-					<div class='col-lg-4 col-md-6 hover'>
+				  <div class="row no-gutter row-for-imgs">
+					<div class='col-sx-12 col-sm-6 col-md-4 hover'>
 							<a href="#">
 								<img src="https://placem.at/things?w=490&random=4" alt="">
 							</a>
 					</div>
-					<div class='col-lg-4 col-md-6 hover'>
+					<div class='col-sx-12 col-sm-6 col-md-4 hover'>
 						<a href="#">
 							<img src="https://placem.at/things?w=490&random=5" alt="">
 						</a>
 					</div>
-					<div class='col-lg-4 col-md-6 hover'>
+					<div class='col-sx-12 col-sm-6 col-md-4 hover'>
 						<a href="#">
 							<img src="https://placem.at/things?w=490&random=6" alt="">
 						</a>
 					</div>
-					<div class='col-lg-4 col-md-6 hover'>
+					<div class='col-sx-12 col-sm-6 col-md-4 hover'>
 						<a href="#">
 							<img src="https://placem.at/things?w=490&random=4" alt="">
 						</a>
 					</div>
-					<div class='col-lg-4 col-md-6 hover'>
+					<div class='col-sx-12 col-sm-6 col-md-4 hover'>
 						<a href="#">
 							<img src="https://placem.at/things?w=490&random=5" alt="">
 						</a>
 					</div>
-					<div class='col-lg-4 col-md-6 hover'>
+					<div class='col-sx-12 col-sm-6 col-md-4 hover'>
 						<a href="#">
 							<img src="https://placem.at/things?w=490&random=6" alt="">
 						</a>
 					</div>
 					
-				
+				</div>
 			</div>	
-				<div class="page-main" role="main">
-        			<aside>
-			            <ul>
-			                <li>
-			                    <a href="#"><img src="img/01_aside.png"></a>
-			                </li>
-			                <li>
-			                    <a href="#"><img src="img/02_aside.png"></a>
-			                </li>
-			                <li>
-			                    <a href="#"><img src="img/03_aside.png"></a>
-			                </li>
-			            </ul>
-           			 <button><img src="img/btn_open.png"></button>
-        			</aside>
-    </div>
 		</section>
 
 		<footer id='footer'>
-			
-			<h2>Let's Get In Touch!<h2>	
-			<hr>
-			<p>Ready to start your next project with us? <br>That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-			<div class='imgs'>
-				<div>
-					<img src="" alt="">
-					<p>123-456-6789</p>
-				</div>
-				<div>
-					<img src="" alt="">
-					<p>feedback@gmail.com</p>
-				</div>
-			</div>
-		</footer>
+			<div class="container-fluid">
+					<h2>Let's Get In Touch!<h2>	
+					<hr>
+					<p>Ready to start your next project with us? <br>That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+					<div class='imgs'>
+						<div>
+							<img src="" alt="">
+							<p class="info">123-456-6789</p>
+						</div>
+						<div>
+							<img src="" alt="">
+							<p class='info'>feedback@gmail.com</p>
+						</div>
+					</div>
+						<div class="page-main" role="main">
+		        			<aside>
+					            <ul>
+					                <li>
+					                    <a href="#"><img src="img/01_aside.png"></a>
+					                </li>
+					                <li>
+					                    <a href="#"><img src="img/02_aside.png"></a>
+					                </li>
+					                <li>
+					                    <a href="#"><img src="img/03_aside.png"></a>
+					                </li>
+					            </ul>
+		           			 	<button><img src="img/btn_open.png"></button>
+		        			</aside>
+		   				 </div>
+   			 	</div>
+			</footer>
 	</container>
 
-	<script  src="https://code.jquery.com/jquery-1.12.2.min.js"   
-integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="   
-crossorigin="anonymous"></script>
+	<script src="./js/jquery-1.10.2.min.js"></script>
+	<script src="./js/jquery-ui-1.10.3.custom.min.js"></script>
 	<script src="./js/main.js"></script>
+	<script src="./js/main2.js"></script>
+
 	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
